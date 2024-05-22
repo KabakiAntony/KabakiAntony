@@ -1,0 +1,142 @@
+:root {
+    --color-white: #ffffff;
+    --color-primary: #000000;
+    --border-radius: 0.5rem;
+    --border: 1px solid var(--color-primary);
+    --box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 1px 1px 6px 3px rgba(0, 0, 0, 0.5);
+    --gradient-bg: linear-gradient(135deg, #8ed1fc, #3286bba6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    font-family: 'Avenir', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--color-primary);
+    min-height: 100vh;
+    position: relative;
+    background-image: url("./background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul, li{
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 5rem;
+    top: 0;
+}
+
+.logo {
+    font-size: 20px;
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo:hover{
+    background-color: #333;
+    color: #fff;
+    padding:10px 0 ;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+main {
+    padding: 20px; 
+}
+
+footer {
+    color: var(--color-primary);
+    height: 4rem;
+    padding: 0.6rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
+}
+
+footer ul li img {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: 480px){
+
+}
+
+@media (min-width: 768px) {
+    .logo {
+            font-size: 26px;
+        }
+
+        nav ul {
+            gap: 10px;
+        }
+    
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1200px) {
+    .logo {
+            font-size: 30px;
+        }
+}
