@@ -1,7 +1,10 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-    <p>this is the index page</p>
-
+    <div class="image">
+        <img src="{{ me.thumb.url }}" alt="{{ me.title }}">
+    </div>
+    <div class="description">
+        {{ me.description }}
+    </div>
 {% endblock content %}
