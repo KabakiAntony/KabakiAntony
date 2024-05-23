@@ -15,12 +15,21 @@ class Me(BaseModel):
     def __str__(self):
         return self.title
     
+    class Meta:
+        verbose_name_plural = "Me"
+    
 
 class Projects(BaseModel):
     def __str__(self):
         return self.title
     
+    class Meta:
+        verbose_name_plural = "Projects"
+    
 
 class Blogs(BaseModel):
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = "Articles"
