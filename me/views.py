@@ -1,13 +1,25 @@
 from django.shortcuts import render
-
+from .models import Me, Projects, Blogs
 
 def home(request):
-    return render(request, "me/index.html")
+    me = Me.objects.first()
+    context = {
+        "me":me,
+    }
+    return render(request, "me/index.html", context)
 
 
 def projects(request):
-    return render(request, "me/projects.html")
+    projects = Projects.objects.all()
+    context = {
+        "projects": projects,
+    }
+    return render(request, "me/projects.html", context)
 
 
 def blogs(request):
-    return render(request, "me/blogs.html")
+    articles = Blogs.objects.all()
+    context = {
+        "articles": articles,
+    }
+    return render(request, "me/blogs.html", context)
