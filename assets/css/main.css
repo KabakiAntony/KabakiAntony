@@ -1,11 +1,8 @@
 :root {
     --color-white: #ffffff;
     --color-primary: #000000;
-    --border-radius: 0.5rem;
-    --border: 1px solid var(--color-primary);
-    --box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
-    --box-shadow-hover: 1px 1px 6px 3px rgba(0, 0, 0, 0.5);
-    --gradient-bg: linear-gradient(135deg, #8ed1fc, #3286bba6);
+    --color-light-blue:#B1DBF7;
+    --border-radius: 5rem;
 }
 
 * {
@@ -39,6 +36,9 @@ header {
     padding: 10px 20px;
     height: 5rem;
     top: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -51,9 +51,9 @@ header {
 
 .logo:hover{
     background-color: #333;
-    color: #fff;
-    padding:10px 0 ;
-    border-radius: 4px;
+    color: var(--color-white);
+    padding:10px 0;
+    border-radius: var(--border-radius);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -68,17 +68,40 @@ nav ul li a {
     text-decoration: none;
     color: var(--color-primary);
     padding: 10px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #333;
-    color: #fff;
+    color: var(--color-white)
 }
 
 main {
-    padding: 20px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+    padding-top: 5rem;
+}
+
+.description{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.image{
+    background-color: var(--color-light-blue);
+    border-radius: var(--border-radius);
+    height: fit-content;
+    padding:20px;
+    text-align: center;
 }
 
 footer {
@@ -127,9 +150,24 @@ footer ul li a {
             font-size: 26px;
         }
 
-        nav ul {
-            gap: 10px;
-        }
+    nav ul {
+        gap: 10px;
+    }
+
+    main{
+        flex-direction: row;
+        width: 90%;
+        gap:5rem;
+    }
+
+    .image {
+        width: 50%;
+    }
+
+    .description {
+        padding: 0.5rem;
+        font-size: 28px;
+    }
     
 }
 @media (min-width: 1024px) {
