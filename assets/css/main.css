@@ -42,26 +42,17 @@ header {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     color: var(--color-primary);
     font-weight: bold;
     text-decoration: none;
 }
 
-.logo:hover{
-    background-color: #333;
-    color: var(--color-white);
-    padding:10px 0;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s, color 0.3s;
-}
-
 nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 3px;
 }
 
 nav ul li a {
@@ -77,6 +68,11 @@ nav ul li a:hover {
     color: var(--color-white)
 }
 
+nav ul li a:active {
+    background-color: #333;
+    color: var(--color-white)
+}
+
 main {
     padding: 20px;
     display: flex;
@@ -85,7 +81,7 @@ main {
     width: 100%;
     margin: 0 auto;
     gap: 1rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
 .description{

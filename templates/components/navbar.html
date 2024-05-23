@@ -1,11 +1,12 @@
 {% load static %}
 
 <header>
-    <h1><a class="logo" href="{% url 'me:home' %}">Kabaki Antony</a></h1>
+    <h1 class="logo">Kabaki Antony</h1>
     <nav>
         <ul>
-            <li><a href="{% url 'me:projects' %}">Projects</a></li>
-            <li><a href="{% url 'me:articles' %}">Articles</a></li>
+            <li><a href="{% url 'me:home' %}">/Me</a></li>
+            <li><a href="{% url 'me:projects' %}">/Projects</a></li>
+            <li><a href="{% url 'me:articles' %}">/Articles</a></li>
         </ul>
     </nav>
 </header>
