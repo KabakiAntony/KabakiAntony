@@ -1,6 +1,17 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <p>projects go here</p>
-
+    <div class="projects-grid">
+        {% for project in projects %}
+            <div class="project">
+                <p class="title">{{ project.title }}</p>
+                <img src="{{ project.thumb.url }}" alt="{{ project.title }}">
+                <p class="snippet">{{ project.description }}</p>
+                <div class="project-buttons">
+                    <a href="{{ project.url }}">Live Site</a>
+                    <a href="{{ project.github_url }}">View Code</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
