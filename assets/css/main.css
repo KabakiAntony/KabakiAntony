@@ -5,7 +5,7 @@
     --color-lighter-blue:#B1DBF7;
     --color-darker-blue:#90CDF7;
     --color-button-bg: #333;
-    --border-radius: 2.5rem;
+    --border-radius: 0.5rem;
 }
 
 * {
@@ -110,7 +110,7 @@ main {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
 .project {
@@ -118,18 +118,42 @@ main {
     flex-direction: column; 
     justify-content: space-between;
     border: 1px solid #000;
+    border-radius:  var(--border-radius);
 }
 
-.project .title{
-    background-color: var(--color-darker-blue);
+.project .title {
+    display: none;
+}
+
+#blog .title{ 
+    background-color: var(--color-button-bg);
     padding: 10px;
     font-weight: bold;
+    display: block;
+    height: 80px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: none;
+}
+#blog .title h1{
     font-size: 20px;
-    overflow: hidden;
-    display: none;
+    color: var(--color-white);
+}
+
+#blog .title:hover{
+    background-color: var(--color-primary);
 }
 .project img{
     width: 100%;
+    height: 300px;
+    object-fit: fill;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+#blog img{
+    height: 250px;
 }
 
 .project .snippet{
@@ -156,7 +180,6 @@ main {
     background-color: var(--color-primary);
     color: var(--color-white)
 }
-
 
 footer {
     color: var(--color-primary);
