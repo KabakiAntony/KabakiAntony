@@ -6,6 +6,7 @@
     --color-darker-blue:#90CDF7;
     --color-button-bg: #333;
     --border-radius: 0.5rem;
+    --image-border-radius:5rem;
 }
 
 * {
@@ -94,16 +95,21 @@ main {
     font-style: normal;
 }
 
-
 .image{
     background-color: var(--color-light-blue);
-    border-radius: var(--border-radius);
-    height: fit-content;
+    height: 200px;
+    width: 200px;
     padding:10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: var(--image-border-radius);
 }
 
 .image img{
+    width: 80%;
     border-radius: var(--border-radius);
 }
 
@@ -181,6 +187,10 @@ main {
     color: var(--color-white)
 }
 
+snap{
+    color: red;
+}
+
 footer {
     color: var(--color-primary);
     height: 4rem;
@@ -252,12 +262,15 @@ footer ul li a {
     }
 
     .image {
-        width: 50%;
+        border-radius: var(--image-border-radius);
+        width: auto;
+        height: fit-content;
         transform: rotate(45deg);
         padding: 20px;
     }
 
     .image img{
+        width: auto;
         transform: rotate(-45deg);
     }
 
