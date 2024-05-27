@@ -12,7 +12,7 @@ class MeAdmin(admin.ModelAdmin):
 
 @admin.register(Projects, site=ka_admin_site)
 class ProjectsAdmin(admin.ModelAdmin):
-    list_display = ['title', 'description', "thumb", "url"]
+    list_display = ['title', 'description', "thumb", "url", "github_url"]
     list_display_links = ['title']
     list_filter = ['title']
 
