@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from .models import Me, Projects, Blogs
 
 def home(request):
