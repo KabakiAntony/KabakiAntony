@@ -1,5 +1,15 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <p>blogs go here</p>
+<div class="projects-grid">
+    {% for article in articles %}
+        <div class="project" id="blog">
+            <img src="{{ article.thumb.url }}" alt="{{ article.title }}">
+            <p class="snippet">{{ article.snippet }} click below for more</p>
+                <a class="title" href="{{ article.url }}">
+                    <h1 >{{ article.title }}</h1> 
+                </a>
+        </div>
+    {% endfor %}
+</div>
 {% endblock content %}
