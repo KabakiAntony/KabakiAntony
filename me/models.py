@@ -20,6 +20,11 @@ class Me(BaseModel):
     
 
 class Projects(BaseModel):
+    github_url = models.URLField(max_length=400, unique=True, null=True)
+
+    def snippet(self):
+        return self.description[:200] + " ..."
+
     def __str__(self):
         return self.title
     
