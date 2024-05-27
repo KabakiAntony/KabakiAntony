@@ -33,6 +33,9 @@ class Projects(BaseModel):
     
 
 class Blogs(BaseModel):
+    def snippet(self):
+        return self.description[:150] + " ..."
+
     def __str__(self):
         return self.title
     
