@@ -1,12 +1,12 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="projects-grid">
+<div class="projects-grid" id="blog-grid">
     {% for article in articles %}
         <div class="project" id="blog">
             <img src="{{ article.thumb.url }}" alt="{{ article.title }}">
             <p class="snippet">{{ article.snippet }} 
-                <snap>click on title for more</snap></p>
+                <snap>click below for more</snap></p>
                 <a class="title" href="{{ article.url }}">
                     <h1 >{{ article.title }}</h1> 
                 </a>
