@@ -3,7 +3,7 @@
     --color-primary: #000000;
     --color-light-blue:#D2EDFE;
     --color-lighter-blue:#B1DBF7;
-    --color-darker-blue:#90CDF7;
+    --color-darker-blue:#8ED1FC;
     --color-button-bg: #333;
     --border-radius: 0.5rem;
     --image-border-radius:5rem;
@@ -42,39 +42,79 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    background-color: var(--color-darker-blue);
+    background-color: var(--color-light-blue);
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 26px;
     margin: 0;
     color: var(--color-primary);
     font-weight: bold;
     text-decoration: none;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-white);
     padding: 10px;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    font-size: 16px;
 }
 
-nav ul li a:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white)
+nav ul.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 80%;
+    background-color: var(--color-button-bg);
 }
 
 nav ul li a:active {
     background-color: var(--color-button-bg);
     color: var(--color-white)
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 33px;
+    height: 5px;
+    background-color: var(--color-primary);
+    margin: 3px 0;
+    transition: all 0.3s;
+    border-radius: var(--border-radius);
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+   position: absolute;
 }
 
 main {
@@ -116,14 +156,14 @@ main {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
 .project {
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    border: 1px solid #000;
+    border: 1px solid var(--color-darker-blue);
     border-radius:  var(--border-radius);
 }
 
@@ -200,6 +240,7 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 14px;
+    background-color: var(--color-darker-blue);
 }
 
 footer ul {
@@ -243,7 +284,6 @@ footer ul li a {
     }
     
     header{
-        background-color: var(--color-white);
         height: 4rem;
     }
 
@@ -252,7 +292,29 @@ footer ul li a {
         }
 
     nav ul {
+        display: flex;
+        flex-direction: row;
         gap: 10px;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: var(--color-primary);
+        padding: 10px;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white)
+    }
+
+    .hamburger{
+        display: none;
     }
 
     main{
@@ -279,12 +341,17 @@ footer ul li a {
         font-size: 28px;
     }
 
-    nav ul li a {
-        font-size: 20px;
-    }
-
     .projects-grid{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #blog-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    #blog img {
+        height:180px;
     }
     
 }
