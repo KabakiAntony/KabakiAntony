@@ -341,22 +341,28 @@ footer ul li a {
         font-size: 28px;
     }
 
-    .projects-grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #blog-grid{
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-
     #blog img {
         height:180px;
     }
     
 }
+
+@media (min-width: 850px){
+    .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+}
+
 @media (min-width: 1200px) {
     .logo {
             font-size: 30px;
+        }
+
+        #blog-grid{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
         }
 }
