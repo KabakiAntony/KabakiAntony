@@ -3,10 +3,15 @@
 <header>
     <h1 class="logo">Kabaki Antony</h1>
     <nav>
-        <ul>
-            <li><a href="{% url 'me:home' %}">/Me</a></li>
-            <li><a href="{% url 'me:projects' %}">/Projects</a></li>
-            <li><a href="{% url 'me:articles' %}">/Articles</a></li>
+        <ul class="nav-links">
+            <li><a href="{% url 'me:home' %}">Me</a></li>
+            <li><a href="{% url 'me:projects' %}">Projects</a></li>
+            <li><a href="{% url 'me:articles' %}">Articles</a></li>
         </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </nav>
 </header>
