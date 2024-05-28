@@ -4,9 +4,9 @@
     <h1 class="logo">Kabaki Antony</h1>
     <nav>
         <ul class="nav-links">
-            <li><a href="{% url 'me:home' %}">Me</a></li>
-            <li><a href="{% url 'me:projects' %}">Projects</a></li>
-            <li><a href="{% url 'me:articles' %}">Articles</a></li>
+            <li class="nav-item"><a href="{% url 'me:home' %}" class="{% if request.path == '/' %}active{% endif %}">Me</a></li>
+            <li class="nav-item"><a href="{% url 'me:projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">Projects</a></li>
+            <li class="nav-item"><a href="{% url 'me:articles' %}" class="{% if request.path == '/articles/' %}active{% endif %}">Articles</a></li>
         </ul>
         <div class="hamburger">
             <div class="line"></div>
